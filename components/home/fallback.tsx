@@ -65,3 +65,59 @@ export const TrendingCoinFallback = () => {
         </div>
     )
 }
+
+const categoryFallbackRows = Array.from({ length: 10 }, (_, index) => index)
+
+export const CategoryFallback = () => {
+    const columns: DataTableColumn<number>[] = [
+        {
+            header: "Category",
+            cellClassName: "category-cell",
+            cell: () => <div className="skeleton category-skeleton" />,
+        },
+        {
+            header: "Top Gainers",
+            cellClassName: "top-gainers-cell",
+            cell: () => (
+                <div className="flex gap-1">
+                    <div className="skeleton coin-skeleton" />
+                    <div className="skeleton coin-skeleton" />
+                    <div className="skeleton coin-skeleton" />
+                </div>
+            ),
+        },
+        {
+            header: "24h Change",
+            cellClassName: "change-header-cell",
+            cell: () => (
+                <div className="change-cell">
+                    <div className="skeleton change-icon" />
+                    <div className="skeleton value-skeleton-sm" />
+                </div>
+            ),
+        },
+        {
+            header: "Market Cap",
+            cellClassName: "market-cap-cell",
+            cell: () => <div className="skeleton value-skeleton-md" />,
+        },
+        {
+            header: "24h Volume",
+            cellClassName: "volume-cell",
+            cell: () => <div className="skeleton value-skeleton-lg" />,
+        },
+    ]
+
+    return (
+        <div id="categories-fallback" className="custom-scrollbar" aria-hidden="true">
+            <h4>Top Categories</h4>
+
+            <DataTable
+                data={categoryFallbackRows}
+                columns={columns}
+                rowKey={(row) => row}
+                tableClassName="mt-3"
+            />
+        </div>
+    )
+}
