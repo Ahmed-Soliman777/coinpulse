@@ -6,9 +6,7 @@ import { formatCurrency } from "@/lib/utils"
 import {
     Select,
     SelectContent,
-    SelectGroup,
     SelectItem,
-    SelectLabel,
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
@@ -26,7 +24,7 @@ const Converter = ({
 
 
     return (
-        <div id="input-wrapper">
+        <div id="converter">
             <h4>{symbol.toUpperCase()} Converter</h4>
             <div className="panel">
                 <div className="input-wrapper">

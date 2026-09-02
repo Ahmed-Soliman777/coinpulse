@@ -82,7 +82,7 @@ const LiveDataWrapper = ({
 
             <Separator className={'divider'} />
 
-            {tradeColumns && (
+            {/* {tradeColumns && (
                 <div className="trades">
                     <h4>Recent Trades</h4>
 
@@ -93,7 +93,7 @@ const LiveDataWrapper = ({
                         tableClassName="trades-table"
                     />
                 </div>
-            )}
+            )} */}
         </section>
     )
 }
