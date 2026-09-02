@@ -1,7 +1,6 @@
 import { fetcher } from '@/lib/coingecko.actions'
 import { formatCurrency } from '@/lib/utils'
 import Image from 'next/image'
-import React from 'react'
 import { CoinOverviewFallback } from './fallback'
 import CandlestackChart from '../CandlestackChart'
 
