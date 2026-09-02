@@ -60,7 +60,7 @@ const LiveDataWrapper = ({
                 image={coin.image.large}
                 livePrice={price?.usd ?? coin.market_data.current_price.usd}
                 livePriceChangePercentage24h={
-                    price?.volume24h ?? coin.market_data.price_change_percentage_30d_in_currency
+                    price?.volume24h ?? coin.market_data.price_change_percentage_24h_in_currency
                 }
                 priceChange24h={coin.market_data.price_change_24h_in_currency.usd}
             />
